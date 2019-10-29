@@ -5,7 +5,6 @@ const getCows = () => new Promise((resolve, reject) => {
     const demCows = response.data.cows;
     const cows = [];
     Object.keys(demCows).forEach((cowId) => {
-      // demCows['cow3']
       demCows[cowId].id = cowId;
       cows.push(demCows[cowId]);
     });

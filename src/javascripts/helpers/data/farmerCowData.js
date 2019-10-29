@@ -1,17 +1,15 @@
 import axios from 'axios';
 
-const getFarmerCows = () => new Promise((resolve, reject) => {
-  axios.get('../../../../db/farmerCows.json')
-    .then((response) => {
-      const demFarmerCows = response.data.farmerCows;
-      const farmerCows = [];
-      Object.keys(demFarmerCows).forEach((farmerCowsId) => {
-        demFarmerCows[farmerCowsId].id = farmerCowsId;
-        farmerCows.push(demFarmerCows[farmerCowsId]);
-      });
-      resolve(farmerCows);
-    })
-    .catch((error) => reject(error));
+const getFarmersCows = () => new Promise((resolve, reject) => {
+  axios.get('../../../db/farmerCows.json').then((response) => {
+    const demFarmerCows = response.data.farmerCows;
+    const farmersCows = [];
+    Object.keys(demFarmerCows).forEach((farmerCowId) => {
+      demFarmerCows[farmerCowId].id = farmerCowId;
+      farmersCows.push(demFarmerCows[farmerCowId]);
+    });
+    resolve(farmersCows);
+  }).catch((error) => reject(error));
 });
 
-export default { getFarmerCows };
+export default { getFarmersCows };

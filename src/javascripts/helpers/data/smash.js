@@ -1,4 +1,4 @@
-// This file is where you write functions that bring multiple collections together
+// where you write fn that bring multiple collections together
 import cowData from './cows';
 import farmerData from './farmerData';
 import farmerCowData from './farmerCowData';
@@ -7,7 +7,7 @@ const getCompleteCows = () => new Promise((resolve, reject) => {
   cowData.getCows()
     .then((cows) => {
       farmerData.getFarmers().then((farmers) => {
-        farmerCowData.getFarmerCows().then((farmerCows) => {
+        farmerCowData.getFarmersCows().then((farmerCows) => {
           const finalCows = [];
           cows.forEach((cow) => {
             const newCow = { ...cow };

@@ -4,8 +4,8 @@ import './cowList.scss';
 
 const buildCows = () => {
   smash.getCompleteCows()
-    .then((response) => {
-      console.log('cow array from cowList', response);
+    .then((cows) => {
+      console.log('cow array from cowList', cows);
     })
     .catch((error) => {
       console.error('shit broke', error);
