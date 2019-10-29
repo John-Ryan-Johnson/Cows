@@ -1,9 +1,11 @@
-import 'bootstrap';
+import cowList from './components/cowList/cowList';
+import farmerList from './components/farmerList/farmerList';
+
 import '../styles/main.scss';
-import cow from './components/cowList';
 
 const init = () => {
-  cow.buildCows();
+  cowList.buildCows();
+  farmerList.buildFarmers();
 };
 
 init();
