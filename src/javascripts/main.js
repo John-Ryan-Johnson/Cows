@@ -7,9 +7,9 @@ import farmerCowData from './helpers/data/farmerCowData';
 const init = () => {
   cow.buildCows();
   farmerList.buildFarmers();
-  farmerCowData.getFarmerCows()
+  farmerCowData.getFarmersCows()
     .then((farmerCows) => {
-      console.log('farmerCow from farmerCowData', farmerCows);
+      console.error('farmerCow from farmerCowData', farmerCows);
     })
     .catch((error) => {
       console.error('shit broke', error);
